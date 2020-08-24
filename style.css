@@ -1,0 +1,323 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400&display=swap");
+/* for better styling first I set the follwing:
+1-I set margin and padding to zero .
+2-Box-sizing to better border .
+3-Define font type . 
+4-Transform all text to capitalize . 
+ */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto Slab", serif;
+  text-transform: capitalize;
+}
+/* 
+  the bage structer is as the following : 
+  the animated logo designed using figma . *animated 
+  3 list item as nav elements .
+  video playing in the background .
+  text to descripe the agancy goal . *animated 
+  4 cards to show previous work .*animated
+  text to explain about plan and pricing . *animated 
+  4 cards to show services and pricing . *animated
+  contact info . *animated 
+ */
+/* ******************* */
+/* The logo  */
+.logo {
+  position: absolute;
+  top: 20px;
+  left: 10px;
+}
+/* logo stroks */
+.logo path {
+  stroke-dasharray: 40px;
+  animation: dash 30s linear infinite;
+}
+/* animation  */
+@keyframes dash {
+  from {
+    stroke-dashoffset: 800;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+/* ******************* */
+/* the nav and ul elements  */
+nav {
+ 
+  position: relative;
+  display: flex;
+  justify-items: center;
+  align-content: center;
+  display: grid;
+}
+ul {
+  
+  display: flex;
+  justify-items: center;
+  align-content: center;
+  gap: 3rem;
+}
+li {
+  display: inline-block;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  letter-spacing: 0.3rem;
+  transition: all 0.5s linear;
+  padding: 0.2rem;
+  color: #eeede7;
+  border-radius: 3px;
+  background-color: #1d242b85;
+}
+li:hover {
+  color: rgb(179, 178, 178);
+  background-color: rgba(83, 44, 65, 0.42);
+  font-weight: 400;
+  cursor: pointer;
+  border: 4px rgba(136, 25, 84, 0.5) solid;
+  transform: translate(0%, -5%);
+}
+/* ******************* */
+/* the background video */
+.background-video {
+  position: fixed;
+  min-height: 100%;
+  min-width: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+/* ******************* */
+/* the goal text and services text  */
+.text {
+  font-size: 1.6rem;
+  text-align: center;
+  position: relative;
+  margin-top: 4rem;
+  margin-left:1rem;
+  margin-right:1rem ;
+  color: #eeede7;
+  animation: text-animation 4s linear 1;
+}
+
+@keyframes text-animation {
+  from {
+    transform: translateY(500%);
+    visibility: hidden;
+  }
+  to {
+    transform: translateY(0%);
+    color: rgba(163, 44, 90, 0.7);
+    font-weight: 400;
+  }
+}
+
+/* ******************* */
+/* previous work cards  and  services cards */
+.cards {
+  margin-top: 2%;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-bottom: 2%;
+  position: relative;
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+  text-align: center;
+  
+}
+
+.card {
+  font-size: 1rem;
+  background-color: #2a2f334d;
+  border-radius: 3px;
+  color: #eeede7;
+  transition: all 0.5s linear;
+  animation: card-animation 4s linear 1;
+  text-align: center;
+}
+.card:hover {
+  color: rgb(179, 178, 178);
+  background-color: rgba(83, 44, 65, 0.42);
+  font-weight: 200;
+  cursor: pointer;
+  border: 4px rgba(136, 25, 84, 0.5) solid;
+  transform: translate(0%, -5%);
+}
+.card img {
+  border-radius: 3px;
+  opacity: .5;
+  width:230px;
+  height: 230px;
+}
+@keyframes card-animation {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+.order{
+  padding:2px;
+  background-color: rgba(136, 25, 84, 1);
+  border: 1px rgba(136, 25, 84, 0.5) solid;
+}
+
+/* ******************* */
+/* the contact info   */
+.contact {
+  position: relative;
+  text-align: center;
+  margin-top: 8rem;
+  background: linear-gradient(
+    90deg,
+    rgba(207, 146, 188, 0.3) 0%,
+    rgba(173, 118, 145, 0.2) 25%
+  );
+  animation: c-animation 6s linear 1;
+  transition: all ease-in 1s;
+}
+footer {
+  gap: 1.3rem;
+  padding-top: 1.8rem;
+  padding-bottom: 1.8rem;
+  color: #ffff;
+  position: relative;
+  text-align: center;
+}
+a{
+  
+  /* padding-right: 1.8rem; */
+  color: #ffff;
+  text-decoration: none;
+}
+a:visited{
+  text-decoration: none;
+}
+@keyframes c-animation {
+  from {
+    transform: translateY(200%);
+  }
+  to {
+    transform: translateY(0%);
+    background-color: rgba(163, 44, 90, 0.7);;
+    font-weight: 200;
+  }
+}
+/* ******** to achive better responsive design *********** */
+/* screen breaks */
+
+@media (max-width: 1000px) {
+  li {
+    font-size: 1rem;
+  }
+  .banner {
+    font-size: 1rem;
+    margin: 5% 20% 3% 20%;
+  }
+  .services {
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+  .work {
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+  ul {
+    position: relative;
+  }
+}
+@media (max-width: 800px) {
+  .cards {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    text-align: center;
+  }
+
+  li {
+    font-size: 0.7rem;
+    text-align: center;
+    -ms-flex-item-align: center;
+  }
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-content: center;
+  }
+  nav {
+    background-color: #2a2f334d;
+  }
+  .text {
+    text-align: center;
+  }
+}
+@media (max-width: 749px) {
+  .cards {
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+
+  li {
+    font-size: 0.7rem;
+    text-align: center;
+    -ms-flex-item-align: center;
+  }
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-content: center;
+  }
+  .card{
+    font-size: .7rem;
+  }
+  nav {
+    background-color: #2a2f334d;
+  }
+  .text {
+    text-align: center;
+  }
+}
+@media (max-width: 400px) {
+  svg {
+    width: 100px;
+  }
+  .logo {
+    top: 0;
+  }
+  .cards {
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    
+  }
+  .card{
+    font-size: .7rem;
+  }
+  li {
+    font-size: 0.7rem;
+    text-align: center;
+    -ms-flex-item-align: center;
+  
+  }
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-content: center;
+  }
+  nav {
+    background-color: #2a2f334d;
+  }
+  .text {
+    text-align: center;
+  }
+}
