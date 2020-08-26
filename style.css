@@ -29,9 +29,11 @@ body {
   position: absolute;
   top: 20px;
   left: 10px;
+  background-color: rgba(189, 99, 64, 0.1);
 }
 /* logo stroks */
 .logo path {
+  
   stroke-dasharray: 40px;
   animation: dash 30s linear infinite;
 }
@@ -70,14 +72,14 @@ li {
   padding: 0.2rem;
   color: #eeede7;
   border-radius: 3px;
-  background-color: #1d242b85;
+  background-color: rgba(189, 99, 64, 0.3);
 }
 li:hover {
   color: rgb(179, 178, 178);
-  background-color: rgba(83, 44, 65, 0.42);
+  background-color: rgba(189, 99, 64, 0.383);
   font-weight: 400;
   cursor: pointer;
-  border: 4px rgba(136, 25, 84, 0.5) solid;
+  border: 4px rgba(170, 87, 55, 0.609) solid;
   transform: translate(0%, -5%);
 }
 /* ******************* */
@@ -110,7 +112,7 @@ li:hover {
   }
   to {
     transform: translateY(0%);
-    color: rgba(163, 44, 90, 0.7);
+    color: rgba(189, 99, 64, 0.383);
     font-weight: 400;
   }
 }
@@ -132,7 +134,7 @@ li:hover {
 
 .card {
   font-size: 1rem;
-  background-color: #2a2f334d;
+  background-color: rgba(189, 99, 64, 0.383);
   border-radius: 3px;
   color: #eeede7;
   transition: all 0.5s linear;
@@ -141,10 +143,10 @@ li:hover {
 }
 .card:hover {
   color: rgb(179, 178, 178);
-  background-color: rgba(83, 44, 65, 0.42);
+  background-color: rgba(189, 99, 64, 0.644);
   font-weight: 200;
   cursor: pointer;
-  border: 4px rgba(136, 25, 84, 0.5) solid;
+  border: 4px rgba(189, 99, 64, 0.664) solid;
   transform: translate(0%, -5%);
 }
 .card img {
@@ -163,8 +165,8 @@ li:hover {
 }
 .order{
   padding:2px;
-  background-color: rgba(136, 25, 84, 1);
-  border: 1px rgba(136, 25, 84, 0.5) solid;
+  background-color: rgba(189, 99, 64, 1);
+  border: 1px rgba(189, 99, 64, 0.5) solid;
 }
 
 /* ******************* */
@@ -175,8 +177,8 @@ li:hover {
   margin-top: 8rem;
   background: linear-gradient(
     90deg,
-    rgba(207, 146, 188, 0.3) 0%,
-    rgba(173, 118, 145, 0.2) 25%
+    rgba(189, 99, 64, 0.3) 0%,
+    rgba(189, 99, 64, 0.2) 25%
   );
   animation: c-animation 6s linear 1;
   transition: all ease-in 1s;
@@ -204,7 +206,7 @@ a:visited{
   }
   to {
     transform: translateY(0%);
-    background-color: rgba(163, 44, 90, 0.7);;
+    background-color: rgba(189, 99, 64, 0.7);
     font-weight: 200;
   }
 }
